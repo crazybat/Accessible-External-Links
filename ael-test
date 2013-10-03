@@ -1,0 +1,86 @@
+<!doctype html>
+<html dir="ltr" lang="en-US">
+
+<head>
+
+<meta charset="UTF-8" />
+	<title>Crazy Bat Designs - Accessible External Links</title>
+	
+	<link rel="shortcut icon" href="/gfx/favicon.ico" type="image/x-icon" />
+
+	<style type="text/css" media="all">
+	a[rel="external"] {
+		background: url(gfx/Icon_External_Link.png) 100% 50% no-repeat;
+		padding-right: 1.0em;
+		z-index: 48;
+	}
+
+	a[rel="external"]:hover,
+	a[rel="external"]:focus,
+	a[rel="external"]:active {
+		z-index: 49;
+	}
+
+	a[rel="external"] .ol,
+	a[rel="external"]:link .ol {
+		position: absolute;
+		width: 0;
+		height: 0;
+		overflow: hidden;  
+		z-index: 50; 
+		text-decoration: none;
+	}
+
+	a[rel="external"]:focus .ol,
+	a[rel="external"]:hover .ol {
+		float: right;
+		background: pink;
+		width: auto;
+		height: auto;
+		border: solid 1px pink;
+		margin-left: 1.5em;	
+		margin-top: 0.5em;
+		padding: 0.2em;
+		overflow: visible;
+		-moz-border-radius: 0.5em; 
+		-webkit-border-radius: 0.5em; 
+		border-radius: 0.5em;
+		box-shadow: 0.5em 0.5em 0.5em #000;
+		z-index:51;	
+	}
+
+	a[rel="external"]:focus .ol:before,
+	a[rel="external"]:hover .ol:before {
+	   content:"";
+	   position: absolute;
+	   width: 0;
+	   height: 0;
+	   border-top: 1px solid transparent;
+	   border-right: 20px solid pink;
+	   border-bottom: 15px solid transparent;
+	   margin: 0 0 0 -20px;
+	}
+	</style>
+</head>
+
+<body>
+
+<p>Testing external links up in here. Actually, it all started with a question from <a href="https://twitter.com/#!/GlendaWH/status/90531756826042368" rel="external">Glenda</a> about the accessibility of using CSS to announce a new window, based on an <a href="http://ht.ly/5BRcx" rel="external">external link example</a>. <a href="https://twitter.com/#!/SteveBuell" rel="external">Steve</a> was there to help. The rest is history ;)</p>
+
+<ul>
+	<li><a href="http://google.com" rel="external">Google <span class="ol">[External Link]</span></a></li>
+	<li><a href="http://google.com" rel="external">Google <span class="ol">[External Link]</span></a></li>
+	<li><a href="http://google.com" rel="external">Google <span class="ol">[External Link]</span></a></li>
+	<li><a href="http://google.com" rel="external">Google <span class="ol">[External Link]</span></a></li>
+</ul>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id dolor sit amet quam consequat tempus. Duis ante arcu, cursus sit amet consectetur eget, accumsan sit amet nulla. <a href="http://google.com" rel="external">Google <span class="ol">[External Link]</span></a> metus urna, egestas ut imperdiet sed, pretium in nibh. Phasellus felis dolor, ullamcorper eu dignissim in, lobortis ut libero. Donec interdum auctor suscipit. Aliquam erat volutpat. Proin libero ligula, pharetra a tincidunt sit amet, ultrices a eros. Curabitur condimentum, <a href="http://google.com" rel="external">Google <span class="ol">[External Link]</span></a> sit amet cursus pellentesque, ligula dui pharetra arcu, non aliquet tellus libero et leo. Cras gravida congue dui, a mattis nisl congue nec. Donec in sapien neque. Maecenas <a href="http://google.com" rel="external">Google <span class="ol">[External Link]</span></a> porttitor aliquam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam ac turpis ut mi cursus pellentesque. Suspendisse potenti. Ut sit amet sem ante, in ultrices dui.</p>
+
+<p>Thank you to <a href="http://www.doitmyselfblog.com/who-is-glenda-watson-hyatt-glendawh/" rel="external">Glenda</a> and <a href="https://twitter.com/#!/SteveBuell" rel="external">Steve</a> for your help on this. Just when I thought I knew everything :)</p>
+
+<p>Back to <a href="http://crazybat.ca" rel="external">Crazy Bat Deisgns <span class="ol">[External Link]</span></a></p>
+
+</body>
+</html>
+
+
